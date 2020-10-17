@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom'
 
 const App = () => {
     return (
@@ -8,4 +9,4 @@ const App = () => {
     )
 }
 
-export default App;
+ReactDOM.render(<App/>, document.getElementById('root'));
