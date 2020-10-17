@@ -8,6 +8,7 @@ const {
 
 
 const configs = addBaseConfig({
+    target: 'node',
     mode: 'development',
     output: {
         filename: 'client/src/[name].js'
