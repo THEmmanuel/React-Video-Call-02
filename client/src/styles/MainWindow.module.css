@@ -1,0 +1,81 @@
+.MainWindow {
+    display: flex;
+    flex-direction: row;
+    background-color: #F3FFFB;
+    color: #F5F7F7;
+}
+
+.SectionControls {
+    background-color:#1B4A43;
+}
+
+section {
+    display: block;
+    height: 100vh;
+    width: 50%;
+}
+
+.MainControls{
+    display: block;
+    width: 35%;
+    margin: auto;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    text-align: left;
+}
+
+.InstructionText{
+}
+
+.IDInput{
+    background-color: #C6E4D9;
+    border-radius: 6px;
+    border: none;
+    width: 320px;
+    height: 32px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #305A55;
+    font-size: 1.2rem;
+    padding: 2px;
+}
+
+span {
+    display: block;
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 450;
+    text-align: left;
+}
+
+button{
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 50%;
+    background-color: #305A55;
+}
+
+.MainControls01{
+    margin-bottom: 25px;
+}
+
+.CallerID{
+    display: inline;
+    font-weight: 700;
+}
+
+.GenerateInstruction{
+    font-weight: 200;
+    font-size: 0.9rem;
+}
+
+.MainBackground{
+    background-image: url(/assets/undraw_group_video_el8e.svg);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-color: #F3FFFB;
+
+}

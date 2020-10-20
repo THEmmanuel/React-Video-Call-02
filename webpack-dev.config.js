@@ -15,9 +15,29 @@ const configs = addBaseConfig({
     },
 
     module: {
-        rules: [{
+        rules: [
+            //Rules for global styling.
+            {
                 test: /\.css/,
-                use: ['style-loader', 'css-loader']
+                use: ['style-loader', 'css-loader'],
+                exclude: /\.module\.css$/
+            },
+            //Rules for CSS modules
+            {
+                test: /\.(css|scss)$/,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1,
+                            modules: {
+                                localIdentName: "[name]__[local]___[hash:base64:5]",
+                            },
+                        }
+                    }
+                ],
+                include: /\.module\.css$/
             },
             {
                 test: /\.(png|woff|woff2|eot|ttf|svg)$/,
