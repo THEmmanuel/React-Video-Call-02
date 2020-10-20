@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import MainWindow from './containers/MainWindow';
+import './styles/App.css'
 
 const App = () => {
     return (
