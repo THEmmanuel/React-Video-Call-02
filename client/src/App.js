@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
+import MainWindow from './containers/MainWindow';
 
 const App = () => {
     return (
-        <span>
-            Hello!
-        </span>
+        <MainWindow/>
     )
 }
 
