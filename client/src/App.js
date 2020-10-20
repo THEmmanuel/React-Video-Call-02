@@ -1,7 +1,11 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import ReactDOM from 'react-dom'
 import MainWindow from './containers/MainWindow';
 import './styles/App.css'
+import socket from '../../utils/socket';
+import PeerConnection from '../../utils/PeerConnection';
+import _ from 'lodash';
+
 
 const App = () => {
     const [ClientToken, setClientToken] = useState('');
@@ -72,7 +76,7 @@ const App = () => {
 
 
     return (
-        <MainWindow />
+        <MainWindow clientToken startCallHandler/>
     )
 }
 
