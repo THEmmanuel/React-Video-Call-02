@@ -20,9 +20,9 @@ const App = () => {
 
     useEffect(() => {
         socket
-            .on('init', ({ token: ClientToken }) => {
+            .on('init', ({ id: ClientToken }) => {
                 document.title = `${ClientToken} - Video Call`;
-                setClientToken({ ClientToken })
+                setClientToken(ClientToken)
             })
             .on('request', ({ from: CallFrom }) => {
                 setCallModal({ CallModal: 'active', CallFrom })
@@ -76,7 +76,7 @@ const App = () => {
 
 
     return (
-        <MainWindow clientToken startCallHandler/>
+        <MainWindow clientToken = {ClientToken} startCall = {startCallHandler}/>
     )
 }
 

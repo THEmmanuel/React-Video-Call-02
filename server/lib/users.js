@@ -13,7 +13,7 @@ async function uniqueToken(){
 
 exports.create = async (socket) => {
     const id = await uniqueToken();
-    users[id] = socket
+    users[id] = socket;
     return id;
 };
 
