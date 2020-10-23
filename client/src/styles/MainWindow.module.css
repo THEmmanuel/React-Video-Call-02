@@ -6,7 +6,7 @@
 }
 
 .SectionControls {
-    background-color:#1B4A43;
+    background-color: #1B4A43;
 }
 
 section {
@@ -15,7 +15,7 @@ section {
     width: 50%;
 }
 
-.MainControls{
+.MainControls {
     display: block;
     width: 35%;
     margin: auto;
@@ -25,10 +25,9 @@ section {
     text-align: left;
 }
 
-.InstructionText{
-}
+.InstructionText {}
 
-.IDInput{
+.IDInput {
     background-color: #C6E4D9;
     border-radius: 6px;
     border: none;
@@ -49,7 +48,7 @@ span {
     text-align: left;
 }
 
-button{
+button {
     width: 40px;
     height: 40px;
     margin-right: 20px;
@@ -59,21 +58,21 @@ button{
     transition: all 1s;
 }
 
-.MainControls01{
+.MainControls01 {
     margin-bottom: 25px;
 }
 
-.CallerID{
+.CallerID {
     display: inline;
     font-weight: 700;
 }
 
-.GenerateInstruction{
+.GenerateInstruction {
     font-weight: 200;
     font-size: 0.9rem;
 }
 
-.MainBackground{
+.MainBackground {
     background-image: url(/assets/undraw_group_video_el8e.svg);
     background-repeat: no-repeat;
     background-size: 60%;
@@ -81,6 +80,6 @@ button{
     background-position: 50%;
 }
 
-button:hover{
- background-color: #F3FFFB;   
+button:hover {
+    background-color: #F3FFFB;
 }

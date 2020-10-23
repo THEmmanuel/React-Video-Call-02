@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom'
 import MainWindow from './containers/MainWindow';
 import './styles/App.css'
@@ -76,7 +76,7 @@ const App = () => {
 
 
     return (
-        <MainWindow clientToken = {ClientToken} startCall = {startCallHandler}/>
+        <MainWindow clientToken={ClientToken} startCall={startCallHandler} />
     )
 }
 
