@@ -6,4 +6,16 @@ const CallWindow = () => {
 
 }
 
+CallWindow.propTypes = {
+    status: PropTypes.string.isRequired,
+    localSrc: PropTypes.object,
+    peerSrc: PropTypes.object,
+    config: PropTypes.shape({
+        audio: PropTypes.bool.isRequired,
+        video: PropTypes.bool.isRequired
+    }).isRequired,
+    mediaDevice: PropTypes.object,
+    endCall: PropTypes.func.isRequired
+}
+
 export default CallWindow;
