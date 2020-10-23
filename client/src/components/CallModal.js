@@ -13,7 +13,7 @@ const CallModal = ({ status, callFrom, startCall, rejectCall }) => {
         <div className={style.CallModal}>
             <div className={style.CallModalButtons}>
                 <span className={style.CallText}>
-                    Call from {callFrom}
+                    Incoming call from {callFrom}
                 </span>
 
                 <button className={style.ModalButton} type='button' onClick={acceptWithVideo(true)}></button>
