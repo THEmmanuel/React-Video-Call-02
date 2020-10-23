@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom'
 import MainWindow from './containers/MainWindow';
+import CallModal from './components/CallModal';
 import './styles/App.css'
 import socket from '../../utils/socket';
 import PeerConnection from '../../utils/PeerConnection';
@@ -10,7 +11,7 @@ import _ from 'lodash';
 const App = () => {
     const [ClientToken, setClientToken] = useState('');
     const [CallWindow, setCallWindow] = useState('')
-    const [CallModal, setCallModal] = useState('')
+    const [callModal, setcallModal] = useState('')
     const [CallFrom, setCallFrom] = useState('')
     const [localSrc, setLocalSrc] = useState(null)
     const [peerSrc, setPeerSrc] = useState(null)
@@ -49,7 +50,7 @@ const App = () => {
         peerConnection = new PeerConnection(friendToken)
             .on('localStream', src => {
                 if (!isCaller) {
-                    setCallModal('')
+                    setcallModal('')
                 }
             })
             .on('peerStream', src => setPeerSrc(src))
@@ -58,7 +59,7 @@ const App = () => {
 
     const rejectCallHandler = () => {
         socket.emit('end', { to: CallFrom });
-        setCallModal('')
+        setcallModal('')
     }
 
     const endCallHandler = isStarter => {
@@ -69,14 +70,26 @@ const App = () => {
         peerConnection = {};
         Config = null;
         setCallWindow('');
-        setCallModal('');
+        setcallModal('');
         setLocalSrc(null);
         setPeerSrc(null);
     }
 
 
     return (
-        <MainWindow clientToken={ClientToken} startCall={startCallHandler} />
+        <div>
+            <MainWindow
+                clientToken={ClientToken}
+                startCall={startCallHandler} />
+
+            <CallModal
+                status = {callModal}
+                callFrom = {CallFrom}
+                startCall = {startCallHandler}
+                rejectCall = {rejectCallHandler}
+            />
+
+        </div>
     )
 }
 
