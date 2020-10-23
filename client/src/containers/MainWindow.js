@@ -4,6 +4,14 @@ import style from '../styles/MainWindow.module.css'
 
 
 const MainWindow = ({ clientToken, startCall }) => {
+    
+    const [FriendToken, setFriendToken] = useState(null);
+
+    const callWithVideo = video => {
+        const config = {audio:true, video};
+        return () => FriendToken && startCall(true, FriendToken, config);
+    };
+
     return (
         <div className={style.MainWindow}>
             <section className={style.SectionControls}>
@@ -25,7 +33,10 @@ const MainWindow = ({ clientToken, startCall }) => {
                             Paste your friend's caller ID <br /> below to begin a call
                         </span>
 
-                        <input type="text" className={style.IDInput} />
+                        <input 
+                        type="text" 
+                        className={style.IDInput}
+                        onChange = {(e) => setFriendToken(e.target.value)} />
                     </div>
 
                     <div>
