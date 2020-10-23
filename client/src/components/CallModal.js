@@ -12,13 +12,13 @@ const CallModal = ({ status, callFrom, startCall, rejectCall }) => {
     return (
         <div className={style.CallModal}>
             <div className={style.CallModalButtons}>
-                <span>
+                <span className={style.CallText}>
                     Call from {callFrom}
                 </span>
 
                 <button className={style.ModalButton} type='button' onClick={acceptWithVideo(true)}></button>
                 <button className={style.ModalButton} type='button' onClick={acceptWithVideo(false)}></button>
-                <button className={style.ModalButton} type='button' onClick={rejectCall}></button>
+                <button className={style.RejectCallButton} type='button' onClick={rejectCall}></button>
             </div>
         </div>
     )
