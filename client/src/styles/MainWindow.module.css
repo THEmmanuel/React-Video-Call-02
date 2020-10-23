@@ -78,7 +78,7 @@ button{
     background-repeat: no-repeat;
     background-size: 60%;
     background-color: #F3FFFB;
-
+    background-position: 50%;
 }
 
 button:hover{
