@@ -40,8 +40,10 @@ const MainWindow = ({ clientToken, startCall }) => {
                     </div>
 
                     <div>
-                        <button></button>
-                        <button></button>
+                        {/* Calls with video and audio enabled */}
+                        <button onClick = {callWithVideo(true)}></button>
+                        {/* Calls with only audio enabled */}
+                        <button onClick = {callWithVideo(false)}></button>
                     </div>
                 </div>
             </section>
