@@ -56,6 +56,7 @@ button{
     border: none;
     border-radius: 50%;
     background-color: #305A55;
+    transition: all 1s;
 }
 
 .MainControls01{
@@ -78,4 +79,8 @@ button{
     background-size: 60%;
     background-color: #F3FFFB;
 
+}
+
+button:hover{
+ background-color: #F3FFFB;   
 }
