@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom'
 import MainWindow from './containers/MainWindow';
 import CallModal from './components/CallModal';
+import CallWindow from './containers/CallWindow';
+
 import './styles/App.css'
 import socket from '../../utils/socket';
 import PeerConnection from '../../utils/PeerConnection';
@@ -88,6 +90,15 @@ const App = () => {
                 startCall = {startCallHandler}
                 rejectCall = {rejectCallHandler}
             />
+
+            {!_.isEmpty(Config) && (<CallWindow
+                status = {CallWindow}
+                localSrc = {localSrc}
+                peerSrc = {peerSrc}
+                config = {Config}
+                mediaDevice = {peerConnection.mediaDevice}
+                endCall = {endCallHandler}
+            />)}
 
         </div>
     )
