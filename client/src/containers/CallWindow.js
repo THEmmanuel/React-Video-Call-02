@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 import style from '../styles/CallWindow.module.css';
 
 const CallWindow = () => {
-    
+    return(
+        <div className = {style.CallWindow}>
+            
+        </div>
+    )
 }
 
 CallWindow.propTypes = {
