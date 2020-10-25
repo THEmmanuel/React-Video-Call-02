@@ -5,7 +5,13 @@ import style from '../styles/CallWindow.module.css';
 const CallWindow = () => {
     return(
         <div className = {style.CallWindow}>
-            
+            <video className = {style.PeerVideo}></video>
+            <video className = {style.LocalVideo}></video>
+            <div>
+                <button></button>
+                <button></button>
+                <button></button>
+            </div>
         </div>
     )
 }
