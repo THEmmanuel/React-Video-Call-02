@@ -4,18 +4,53 @@ import style from '../styles/CallWindow.module.css';
 
 const CallWindow = (status, localSrc, peerSrc, config, mediaDevice, endCall) => {
     const peerVideo = useRef(null);
-    const localVideo = useRef(null);    
+    const localVideo = useRef(null);
 
-    const [video, setvideo] = useState(config.video);
-    const [audio, setaudio] = useState(config.audio);
-    return(
-        <div className = {style.CallWindow}>
-            <video className = {style.PeerVideo}></video>
-            <video className = {style.LocalVideo}></video>
+    const [video, setVideo] = useState(config.video);
+    const [audio, setAudio] = useState(config.audio);
+
+    const toggleMediaDevice = deviceType => {
+        if (deviceType === 'video') {
+            setVideo(!video);
+            mediaDevice.toggle('Video')
+        }
+
+        if (deviceType === 'audio') {
+            setAudio(!audio);
+            mediaDevice.toggle('Audio')
+        }
+    }
+
+    return (
+        <div className={style.CallWindow}>
+            <video className={style.PeerVideo}></video>
+            <video className={style.LocalVideo}></video>
             <div>
-                <button></button>
-                <button></button>
-                <button></button>
+                <button
+                    key='videoButton'
+                    type='button'
+                    className={style.VideoButton}
+                    onclick={() => toggleMediaDevice('video')}
+                >
+                </button>
+
+
+                <button
+                    key='audioButton'
+                    type='button'
+                    className={style.AudioButton}
+                    onclick={() => toggleMediaDevice('audio')}
+                >
+                </button>
+
+
+                <button
+                    key='hangupButton'
+                    type='button'
+                    className={style.HangupButton}
+                    onclick={() => endCall(true)}
+                ></button>
+
             </div>
         </div>
     )
