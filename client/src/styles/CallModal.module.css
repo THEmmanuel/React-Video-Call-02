@@ -1,13 +1,13 @@
 .CallModal {
-    position: absolute 50%;
-    left: 50vw;
+    position: fixed;
+    left: 40vw;
     top: 50vh;
     display: block;
     width: 20%;
     background-color: #305A55;
-    /* margin: auto; */
+    margin: auto;
     border-radius: 6px;
-    /* display: block; */
+    display: block;
     z-index: 200;
 }
 
@@ -15,10 +15,14 @@
     display: none;
 }
 
-.CallModalButtons {
+.CallModalContent {
     margin: auto;
     width: fit-content;
     padding: 5px;
+}
+
+.CallModalButtons{
+    margin: auto;
 }
 
 .CallText {
@@ -35,5 +39,5 @@
 }
 
 .button{
-    padding-left: 5px;
+    /* padding-left: 5px; */
 }
