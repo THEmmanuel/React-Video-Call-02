@@ -1,14 +1,17 @@
-.CallModal{
-    position: absolute;
+.CallModal {
+    position: absolute 50%;
+    left: 50vw;
+    top: 50vh;
+    display: block;
     width: 20%;
     background-color: #305A55;
-    margin: auto;
+    /* margin: auto; */
     border-radius: 6px;
     /* display: block; */
     z-index: 200;
 }
 
-.CallModalInactive{
+.CallModalInactive {
     display: none;
 }
 
@@ -18,15 +21,19 @@
     padding: 5px;
 }
 
-.CallText{
+.CallText {
     color: #E3E9E8;
     margin-bottom: 30px;
 }
 
-.ModalButton{
+.ModalButton {
     background-color: #345A30;
 }
 
-.RejectCallButton{
+.RejectCallButton {
     background-color: #E81123;
+}
+
+.button{
+    padding-left: 5px;
 }
