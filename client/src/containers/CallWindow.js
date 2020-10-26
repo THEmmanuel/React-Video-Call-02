@@ -9,6 +9,17 @@ const CallWindow = (status, localSrc, peerSrc, config, mediaDevice, endCall) => 
     const [video, setVideo] = useState(config.video);
     const [audio, setAudio] = useState(config.audio);
 
+    useEffect(() => {
+        if (peerVideo.current && peerSrc) {
+            peerVideo.current.srcObject = peerSrc;
+        }
+
+        if (localVideo.current && localSrc) {
+            localSrc.current.srcObject = localSrc;
+        }
+    })
+    useEffect()
+
     const toggleMediaDevice = deviceType => {
         if (deviceType === 'video') {
             setVideo(!video);
