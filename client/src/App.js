@@ -85,20 +85,22 @@ const App = () => {
                 startCall={startCallHandler} />
 
             <CallModal
-                status = {callModal}
-                callFrom = {CallFrom}
-                startCall = {startCallHandler}
-                rejectCall = {rejectCallHandler}
+                status={callModal}
+                callFrom={CallFrom}
+                startCall={startCallHandler}
+                rejectCall={rejectCallHandler}
             />
 
-            {!_.isEmpty(Config) && (<CallWindow
-                status = {CallWindow}
-                localSrc = {localSrc}
-                peerSrc = {peerSrc}
-                config = {Config}
-                mediaDevice = {peerConnection.mediaDevice}
-                endCall = {endCallHandler}
-            />)}
+            {!_.isEmpty(Config) && (
+                <CallWindow
+                    status={CallWindow}
+                    localSrc={localSrc}
+                    peerSrc={peerSrc}
+                    config={Config}
+                    mediaDevice={peerConnection.mediaDevice}
+                    endCall={endCallHandler}
+                />
+            )}
 
         </div>
     )

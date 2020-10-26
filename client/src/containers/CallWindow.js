@@ -2,7 +2,12 @@ import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import style from '../styles/CallWindow.module.css';
 
-const CallWindow = () => {
+const CallWindow = (status, localSrc, peerSrc, config, mediaDevice, endCall) => {
+    const peerVideo = useRef(null);
+    const localVideo = useRef(null);    
+
+    const [video, setvideo] = useState(config.video);
+    const [audio, setaudio] = useState(config.audio);
     return(
         <div className = {style.CallWindow}>
             <video className = {style.PeerVideo}></video>
