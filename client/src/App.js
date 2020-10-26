@@ -28,7 +28,8 @@ const App = () => {
                 setClientToken(ClientToken)
             })
             .on('request', ({ from: CallFrom }) => {
-                setcallModal({ CallModal: 'active', CallFrom })
+                setcallModal({ CallModal: 'active'})
+                setCallFrom(CallFrom)
             })
             .on('call', data => {
                 if (data.SDP) {
