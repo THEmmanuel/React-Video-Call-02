@@ -28,7 +28,7 @@ const App = () => {
                 setClientToken(ClientToken)
             })
             .on('request', ({ from: CallFrom }) => {
-                setcallModal({ CallModal: 'active'})
+                setcallModal('active')
                 setCallFrom(CallFrom)
             })
             .on('call', data => {
@@ -63,6 +63,7 @@ const App = () => {
     const rejectCallHandler = () => {
         socket.emit('end', { to: CallFrom });
         setcallModal('')
+        setCallFrom('')
     }
 
     const endCallHandler = isStarter => {
