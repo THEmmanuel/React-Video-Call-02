@@ -10,7 +10,9 @@ const CallModal = ({ status, callFrom, startCall, rejectCall }) => {
     }
 
     return (
-        <div className={style.CallModal}>
+        <div className={
+            status === 'active' ? style.CallModal : style.CallModalInactive
+        }>
             <div className={style.CallModalButtons}>
                 <span className={style.CallText}>
                     Incoming call from {callFrom}
