@@ -18,7 +18,14 @@ const CallWindow = (status, localSrc, peerSrc, config, mediaDevice, endCall) => 
             localSrc.current.srcObject = localSrc;
         }
     })
-    useEffect()
+
+
+    useEffect(() => {
+        if (mediaDevice) {
+            mediaDevice.toggle('Video', video);
+            mediaDevice.toggle('Audio', audio);    
+        }
+    })
 
     const toggleMediaDevice = deviceType => {
         if (deviceType === 'video') {
