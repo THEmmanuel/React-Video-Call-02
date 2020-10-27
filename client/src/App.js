@@ -12,7 +12,7 @@ import _ from 'lodash';
 
 const App = () => {
     const [ClientToken, setClientToken] = useState('');
-    const [CallWindow, setCallWindow] = useState('')
+    const [callWindow, setCallWindow] = useState('')
     const [callModal, setcallModal] = useState('')
     const [CallFrom, setCallFrom] = useState('')
     const [localSrc, setLocalSrc] = useState(null)
@@ -49,16 +49,21 @@ const App = () => {
 
 
     const startCallHandler = (isCaller, friendToken, config) => {
-        config = Config;
+        Config = config;
         peerConnection = new PeerConnection(friendToken)
             .on('localStream', src => {
+                setCallWindow('active')
+                setLocalSrc(src)
                 if (!isCaller) {
                     setcallModal('')
                 }
             })
             .on('peerStream', src => setPeerSrc(src))
             .start(isCaller, config);
-    }
+            console.log(config);
+            console.log(peerConnection)
+            console.log(Config)
+        }
 
     const rejectCallHandler = () => {
         socket.emit('end', { to: CallFrom });
@@ -95,7 +100,7 @@ const App = () => {
 
             {!_.isEmpty(Config) && (
                 <CallWindow
-                    status={CallWindow}
+                    status={callWindow}
                     localSrc={localSrc}
                     peerSrc={peerSrc}
                     config={Config}
