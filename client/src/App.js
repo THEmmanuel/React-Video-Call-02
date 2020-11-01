@@ -61,10 +61,6 @@ const App = () => {
             })
             .on('peerStream', src => setPeerSrc(src))
             .start(isCaller, config);
-        console.log(config);
-        console.log(peerConnection)
-        console.log(PeerConnection)
-        console.log(Config)
     }
 
     const rejectCallHandler = () => {
