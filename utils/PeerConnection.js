@@ -4,33 +4,28 @@ import socket from './socket';
 
 const PC_CONFIG = {
     ICEServers: [{
-        urls: [
-            'stun:stun.l.google.com:19302'
-        ]
+        urls: ['stun:stun.l.google.com:19302']
     }]
-};
+}
 
 class PeerConnection extends Emitter {
     constructor(friendToken) {
         super();
-        this.rtcPeerConnection = new RTCPeerConnection(PC_CONFIG);
-        this.rtcPeerConnection.onicecandidate = event => socket.emit(
-            'call', {
-                to: this.friendToken,
-                candidate: event.candidate
-            }
-        );
-
-        this.rtcPeerConnection.ontrack = event => this.emit('peerStream', event.streams[0]);
+        this.peerConnection = new RTCPeerConnection(PC_CONFIG);
+        this.peerConnection.onicecandidate = event => socket.emit('call', {
+            to: this.friendToken,
+            candidate: event.candidate
+        });
+        this.peerConnection.ontrack = event => this.emit('peerStream', event.streams[0]);
         this.mediaDevice = new MediaDevice();
         this.friendToken = friendToken;
-    };
+    }
 
     start(isCaller, config) {
         this.mediaDevice
             .on('stream', stream => {
                 stream.getTracks().forEach(track => {
-                    this.rtcPeerConnection.addTrack(track, stream);
+                    this.peerConnection.addTrack(track, stream);
                 });
                 this.emit('localStream', stream);
                 if (isCaller) {
@@ -41,7 +36,8 @@ class PeerConnection extends Emitter {
                     this.createOffer();
                 }
             })
-            .start(config)
+            .start(config);
+        return this;
     }
 
     stop(isStarter) {
@@ -50,51 +46,49 @@ class PeerConnection extends Emitter {
                 to: this.friendToken
             });
         }
+
         this.mediaDevice.stop();
-        this.rtcPeerConnection.close();
-        this.rtcPeerConnection = null;
+        this.peerConnection.close();
+        this.peerConnection = null;
         this.off();
         return this;
     }
 
-
     createOffer() {
-        this.rtcPeerConnection.createOffer()
+        this.peerConnection.createOffer()
             .then(this.getDescription.bind(this))
             .catch(err => console.log(err));
         return this;
     }
 
     createAnswer() {
-        this.pc.createAnswer()
+        this.peerConnection.createAnswer()
             .then(this.getDescription.bind(this))
             .catch(err => console.log(err));
         return this;
     }
 
-    getDescription(desc) {
-        this.rtcPeerConnection.setLocalDescription(desc);
-        socket.emit('call', {
-            to: this.friendToken,
-            SDP: desc
-        });
+    getDescription(description) {
+        this.peerConnection.setLocalDescription(description);
+        socket.emit('call', {to: this.friendToken, sdp: description});
         return this;
     }
 
-    setRemoteDescription(SDP) {
-        const rtcSDP = new RTCSessionDescription(SDP);
-        this.rtcPeerConnection.setRemoteDescription(rtcSDP);
+
+    setRemoteDescription(sdp) {
+        const rtcSDP = new RTCSessionDescription(sdp);
+        this.peerConnection.setRemoteDescription(rtcSDP);
         return this;
     }
 
-    addIceCandidate(candidate) {
+    addICECandidate(candidate) {
         if (candidate) {
-            const ICECandidate = new RTCIceCandidate(candidate);
-            this.rtcPeerConnection(ICECandidate);
+            const iceCandidate = new RTCIceCandidate(candidate);
+            this.peerConnection.addIceCandidate(iceCandidate);
         }
+
         return this;
     }
 }
 
-
-export default PeerConnection
+export default PeerConnection;

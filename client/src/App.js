@@ -7,6 +7,7 @@ import CallWindow from './containers/CallWindow';
 import './styles/App.css'
 import socket from '../../utils/socket';
 import PeerConnection from '../../utils/PeerConnection';
+// import PeerConnection from '../../../rtc/client/src/js/PeerConnection'
 import _ from 'lodash';
 
 
@@ -60,10 +61,11 @@ const App = () => {
             })
             .on('peerStream', src => setPeerSrc(src))
             .start(isCaller, config);
-            console.log(config);
-            console.log(peerConnection)
-            console.log(Config)
-        }
+        console.log(config);
+        console.log(peerConnection)
+        console.log(PeerConnection)
+        console.log(Config)
+    }
 
     const rejectCallHandler = () => {
         socket.emit('end', { to: CallFrom });
@@ -91,13 +93,6 @@ const App = () => {
                 clientToken={ClientToken}
                 startCall={startCallHandler} />
 
-            <CallModal
-                status={callModal}
-                callFrom={CallFrom}
-                startCall={startCallHandler}
-                rejectCall={rejectCallHandler}
-            />
-
             {!_.isEmpty(Config) && (
                 <CallWindow
                     status={callWindow}
@@ -108,6 +103,13 @@ const App = () => {
                     endCall={endCallHandler}
                 />
             )}
+
+            <CallModal
+                status={callModal}
+                callFrom={CallFrom}
+                startCall={startCallHandler}
+                rejectCall={rejectCallHandler}
+            />
 
         </div>
     )
