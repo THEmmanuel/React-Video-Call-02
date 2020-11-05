@@ -38,7 +38,7 @@ function App () {
                     }
                 }
                 else {
-                    peerConnection.addIceCandidate(data.candidate);
+                    peerConnection.addICECandidate(data.candidate);
                 }
             })
 
