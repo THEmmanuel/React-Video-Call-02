@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import style from '../styles/CallWindow.module.css';
 
 const CallWindow = (callWindowStatus, localSrc, peerSrc, config, mediaDevice, endCall) => {
-    console.log(callWindowStatus);
+    console.log(config);
     console.log(callWindowStatus.config);
 
     const peerVideo = useRef(null);
@@ -13,8 +13,8 @@ const CallWindow = (callWindowStatus, localSrc, peerSrc, config, mediaDevice, en
     const [audio, setAudio] = useState(callWindowStatus.config.audio);
 
     useEffect(() => {
-        if (peerVideo.current && peerSrc) peerVideo.current.srcObject = peerSrc;
-        if (localVideo.current && localSrc) localVideo.current.srcObject = localSrc;
+        if (peerVideo.current && peerSrc) peerVideo.current.srcObject = callWindowStatus.peerSrc;
+        if (localVideo.current && localSrc) localVideo.current.srcObject = callWindowStatus.localSrc;
         console.log('useEffect01 ran')
     });
 
