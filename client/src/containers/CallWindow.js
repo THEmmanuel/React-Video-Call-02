@@ -2,53 +2,52 @@ import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import style from '../styles/CallWindow.module.css';
 
-const CallWindow = (status, localSrc, peerSrc, config, mediaDevice, endCall) => {
+const CallWindow = (callWindowStatus, localSrc, peerSrc, config, mediaDevice, endCall) => {
+    console.log(callWindowStatus);
+    console.log(callWindowStatus.config);
+
     const peerVideo = useRef(null);
     const localVideo = useRef(null);
 
-    const [video, setVideo] = useState(config.video);
-    const [audio, setAudio] = useState(config.audio);
+    const [video, setVideo] = useState(callWindowStatus.config.video);
+    const [audio, setAudio] = useState(callWindowStatus.config.audio);
 
     useEffect(() => {
-        if (peerVideo.current && peerSrc) {
-            peerVideo.current.srcObject = peerSrc;
-        }
-
-        if (localVideo.current && localSrc) {
-            localSrc.current.srcObject = localSrc;
-        }
-    })
-
+        if (peerVideo.current && peerSrc) peerVideo.current.srcObject = peerSrc;
+        if (localVideo.current && localSrc) localVideo.current.srcObject = localSrc;
+        console.log('useEffect01 ran')
+    });
 
     useEffect(() => {
         if (mediaDevice) {
             mediaDevice.toggle('Video', video);
-            mediaDevice.toggle('Audio', audio);    
+            mediaDevice.toggle('Audio', audio);
         }
-    })
+        console.log('useEffect02 ran')
+    });
 
     const toggleMediaDevice = deviceType => {
         if (deviceType === 'video') {
             setVideo(!video);
-            mediaDevice.toggle('Video')
+            mediaDevice.toggle('Video');
         }
 
         if (deviceType === 'audio') {
             setAudio(!audio);
-            mediaDevice.toggle('Audio')
+            mediaDevice.toggle('Audio');
         }
     }
 
     return (
         <div className={style.CallWindow}>
-            <video className={style.PeerVideo}></video>
-            <video className={style.LocalVideo}></video>
+            <video className={style.PeerVideo} ref={peerVideo}></video>
+            <video className={style.LocalVideo} ref={localVideo} autoPlay muted></video>
             <div>
                 <button
                     key='videoButton'
                     type='button'
                     className={style.VideoButton}
-                    onclick={() => toggleMediaDevice('video')}
+                    onClick={() => toggleMediaDevice('video')}
                 >
                 </button>
 
@@ -57,7 +56,7 @@ const CallWindow = (status, localSrc, peerSrc, config, mediaDevice, endCall) => 
                     key='audioButton'
                     type='button'
                     className={style.AudioButton}
-                    onclick={() => toggleMediaDevice('audio')}
+                    onClick={() => toggleMediaDevice('audio')}
                 >
                 </button>
 
@@ -66,7 +65,7 @@ const CallWindow = (status, localSrc, peerSrc, config, mediaDevice, endCall) => 
                     key='hangupButton'
                     type='button'
                     className={style.HangupButton}
-                    onclick={() => endCall(true)}
+                    onClick={() => endCall(true)}
                 ></button>
 
             </div>
@@ -75,7 +74,7 @@ const CallWindow = (status, localSrc, peerSrc, config, mediaDevice, endCall) => 
 }
 
 CallWindow.propTypes = {
-    status: PropTypes.string.isRequired,
+    callWindowStatus: PropTypes.string.isRequired,
     localSrc: PropTypes.object,
     peerSrc: PropTypes.object,
     config: PropTypes.shape({

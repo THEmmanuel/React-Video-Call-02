@@ -7,20 +7,18 @@ import CallWindow from './containers/CallWindow';
 import './styles/App.css'
 import socket from '../../utils/socket';
 import PeerConnection from '../../utils/PeerConnection';
-// import PeerConnection from '../../../rtc/client/src/js/PeerConnection'
 import _ from 'lodash';
 
+let peerConnection = {};    
+let callConfig = null;
 
-const App = () => {
+function App () {
     const [ClientToken, setClientToken] = useState('');
     const [callWindow, setCallWindow] = useState('')
     const [callModal, setcallModal] = useState('')
     const [CallFrom, setCallFrom] = useState('')
     const [localSrc, setLocalSrc] = useState(null)
     const [peerSrc, setPeerSrc] = useState(null)
-
-    let peerConnection = {};
-    let Config = null;
 
     useEffect(() => {
         socket
@@ -44,16 +42,21 @@ const App = () => {
                 }
             })
 
-            .on('end', endCallHandler.bind(this, false))
+            .on('end', endCallHandler(this, false))
             .emit('init')
-    }, [])
+    },[])
 
 
     const startCallHandler = (isCaller, friendToken, config) => {
-        Config = config;
+        callConfig = config;
+        // setConfig(config)
+        console.log(config);
+        console.log(callConfig);
+        // testNum = 10;
         peerConnection = new PeerConnection(friendToken)
             .on('localStream', src => {
                 setCallWindow('active')
+                console.log('I ran 1');
                 setLocalSrc(src)
                 if (!isCaller) {
                     setcallModal('')
@@ -61,6 +64,7 @@ const App = () => {
             })
             .on('peerStream', src => setPeerSrc(src))
             .start(isCaller, config);
+            console.log('I ran 2')
     }
 
     const rejectCallHandler = () => {
@@ -73,15 +77,17 @@ const App = () => {
         if (_.isFunction(peerConnection.stop)) {
             peerConnection.stop(isStarter);
         }
-
         peerConnection = {};
-        Config = null;
+        callConfig = null;
+        // setConfig(null)
         setCallWindow('');
         setcallModal('');
         setLocalSrc(null);
         setPeerSrc(null);
     }
 
+    console.log(callConfig);
+    console.log(!_.isEmpty(callConfig))
 
     return (
         <div>
@@ -89,14 +95,14 @@ const App = () => {
                 clientToken={ClientToken}
                 startCall={startCallHandler} />
 
-            {!_.isEmpty(Config) && (
+            {!_.isEmpty(callConfig) && (
                 <CallWindow
-                    status={callWindow}
+                    callWindowStatus={callWindow}
                     localSrc={localSrc}
                     peerSrc={peerSrc}
-                    config={Config}
+                    config={callConfig}
                     mediaDevice={peerConnection.mediaDevice}
-                    endCall={endCallHandler}
+                    endCall={() => endCallHandler()}
                 />
             )}
 
@@ -104,7 +110,7 @@ const App = () => {
                 status={callModal}
                 callFrom={CallFrom}
                 startCall={startCallHandler}
-                rejectCall={rejectCallHandler}
+                rejectCall={() => rejectCallHandler()}
             />
 
         </div>
