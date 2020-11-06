@@ -65,7 +65,7 @@ const CallWindow = (callWindowStatus, localSrc, peerSrc, config, mediaDevice, en
                     key='hangupButton'
                     type='button'
                     className={style.HangupButton}
-                    onClick={() => endCall(true)}
+                    onClick={() => callWindowStatus.endCall(true)}
                 ></button>
 
             </div>
