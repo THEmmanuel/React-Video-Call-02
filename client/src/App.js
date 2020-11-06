@@ -57,7 +57,9 @@ function App() {
                     setcallModal('')
                 }
             })
-            .on('peerStream', src => setPeerSrc(src))
+            .on('peerStream', src => {
+                setPeerSrc(src)
+            })
             .start(isCaller, config);
     }
 
