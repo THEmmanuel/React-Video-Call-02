@@ -57,9 +57,7 @@ function App() {
                     setcallModal('')
                 }
             })
-            .on('peerStream', src => {
-                setPeerSrc(src)
-            })
+            .on('peerStream', src => setPeerSrc(src))
             .start(isCaller, config);
     }
 
@@ -82,8 +80,8 @@ function App() {
         setPeerSrc(null);
     }
 
-    console.log(callConfig);
-    console.log(!_.isEmpty(callConfig))
+    // console.log(callConfig);
+    // console.log(!_.isEmpty(callConfig))
 
     return (
         <div>
