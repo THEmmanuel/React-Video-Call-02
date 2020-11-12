@@ -33,3 +33,11 @@
     position: fixed;
     display: block;
 }
+
+.CallButtons{
+    z-index: 1999;
+    position: fixed;
+    display: block;
+    top: 30%;
+    margin: auto;
+}

@@ -48,7 +48,7 @@ const CallWindow = (callWindowStatus, localSrc, peerSrc, config, mediaDevice, en
                 <video className={style.PeerVideo} ref={peerVideo}></video>
             </div>
 
-            <div>
+            <div className = {style.CallButtons}>
                 <button
                     key='videoButton'
                     type='button'

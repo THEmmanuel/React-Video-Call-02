@@ -3,15 +3,13 @@ import ReactDOM from 'react-dom'
 import MainWindow from './containers/MainWindow';
 import CallModal from './components/CallModal';
 import CallWindow from './containers/CallWindow';
-
 import './styles/App.css'
 import socket from '../../utils/socket';
 import PeerConnection from '../../utils/PeerConnection';
+// import PeerConnection from '../../../rtc/client/src/js/PeerConnection';
 import _ from 'lodash';
-
 let peerConnection = {};
 let callConfig = null;
-
 function App() {
     const [ClientToken, setClientToken] = useState('');
     const [callWindow, setCallWindow] = useState('')
@@ -20,10 +18,11 @@ function App() {
     const [localSrc, setLocalSrc] = useState(null)
     const [peerSrc, setPeerSrc] = useState(null)
 
+
     useEffect(() => {
         socket
             .on('init', ({ id: ClientToken }) => {
-                document.title = `${ClientToken} - Video Call`;
+                document.title = `${ClientToken} - Video Call`;
                 setClientToken(ClientToken)
             })
             .on('request', ({ from: CallFrom }) => {
@@ -41,7 +40,6 @@ function App() {
                     peerConnection.addICECandidate(data.candidate);
                 }
             })
-
             .on('end', endCallHandler(this, false))
             .emit('init')
     }, [])
@@ -50,16 +48,17 @@ function App() {
     const startCallHandler = (isCaller, friendToken, config) => {
         callConfig = config;
         peerConnection = new PeerConnection(friendToken)
-            .on('localStream', src => {
-                setCallWindow('active')
-                setLocalSrc(src)
-                if (!isCaller) {
-                    setcallModal('')
-                }
+            .on('localStream', (src) => {
+                setCallWindow('active');
+                setLocalSrc(src);
+                if (!isCaller) setcallModal('')
             })
-            .on('peerStream', src => setPeerSrc(src))
+            .on('peerStream', (src) => { setPeerSrc(src) })
+            .on('localStream', () => { console.log('I just ran') })
+            .on('peerStream', () => { console.log('I just bloody ran') })
             .start(isCaller, config);
     }
+
 
     const rejectCallHandler = () => {
         socket.emit('end', { to: CallFrom });
@@ -67,28 +66,25 @@ function App() {
         setCallFrom('')
     }
 
+
     const endCallHandler = isStarter => {
         if (_.isFunction(peerConnection.stop)) {
             peerConnection.stop(isStarter);
         }
         peerConnection = {};
         callConfig = null;
-        // setConfig(null)
+        // setConfig(null)
         setCallWindow('');
         setcallModal('');
         setLocalSrc(null);
         setPeerSrc(null);
     }
 
-    // console.log(callConfig);
-    // console.log(!_.isEmpty(callConfig))
-
     return (
         <div>
             <MainWindow
                 clientToken={ClientToken}
                 startCall={startCallHandler} />
-
             {!_.isEmpty(callConfig) ? (
                 <CallWindow
                     callWindowStatus={callWindow}
@@ -99,14 +95,12 @@ function App() {
                     endCall={() => endCallHandler()}
                 />
             ) : null}
-
             <CallModal
                 status={callModal}
                 callFrom={CallFrom}
                 startCall={startCallHandler}
                 rejectCall={() => rejectCallHandler()}
             />
-
         </div>
     )
 }
