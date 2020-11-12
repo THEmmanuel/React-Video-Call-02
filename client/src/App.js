@@ -10,6 +10,9 @@ import PeerConnection from '../../utils/PeerConnection';
 import _ from 'lodash';
 let peerConnection = {};
 let callConfig = null;
+
+
+
 function App() {
     const [ClientToken, setClientToken] = useState('');
     const [callWindow, setCallWindow] = useState('')
@@ -54,9 +57,9 @@ function App() {
                 if (!isCaller) setcallModal('')
             })
             .on('peerStream', (src) => { setPeerSrc(src) })
-            .on('localStream', () => { console.log('I just ran') })
-            .on('peerStream', () => { console.log('I just bloody ran') })
             .start(isCaller, config);
+
+            console.log(peerConnection);
     }
 
 

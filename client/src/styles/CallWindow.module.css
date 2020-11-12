@@ -38,6 +38,13 @@
     z-index: 1999;
     position: fixed;
     display: block;
-    top: 30%;
+    bottom: 5%;
     margin: auto;
+    left: 50vw;
+    width: 100%;
+}
+
+.HangupButton{
+    background-color: red;
+    margin-left: 0;
 }
