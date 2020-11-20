@@ -44,11 +44,21 @@ const CallWindow = (callWindowStatus, localSrc, peerSrc, config, mediaDevice, en
             : style.CallWindowInactive}>
 
             <div className={style.VideoContainer}>
-                <video className={style.LocalVideo} ref={localVideo} autoPlay muted></video>
-                <video className={style.PeerVideo} ref={peerVideo}></video>
+                <video
+                    className={style.LocalVideo}
+                    ref={localVideo}
+                    autoPlay
+                    muted>
+                </video>
+
+                <video
+                    className={style.PeerVideo}
+                    ref={peerVideo}
+                    autoPlay>
+                </video>
             </div>
 
-            <div className = {style.CallButtons}>
+            <div className={style.CallButtons}>
                 <button
                     key='videoButton'
                     type='button'
