@@ -2,24 +2,24 @@ const io = require('socket.io');
 const users = require ('./users');
 
 const initSocket = socket => {
-    let id;
+    let token;
     socket
     .on('init', async () => {
-        id = await users.create(socket);
-        socket.emit('init', {id});
+        token = await users.create(socket);
+        socket.emit('init', {token});
     })
 
     .on('request', data => {
         const reciever = users.get(data.to);
         if (reciever) {
-            reciever.emit('request', {from: id});
+            reciever.emit('request', {from: token});
         }
     })
 
     .on('call', data => {
         const reciever = users.get(data.to);
         if (reciever) {
-            reciever.emit('call', {...data, from: id});
+            reciever.emit('call', {...data, from: token});
         } else {
             socket.emit('failed')
         }
@@ -31,8 +31,8 @@ const initSocket = socket => {
         }
     })
     .on('disconnect', () => {
-        users.remove(id)
-        console.log(id, 'disconnected');
+        users.remove(token)
+        console.log(token, 'disconnected');
     });
 }
 

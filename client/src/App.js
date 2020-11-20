@@ -28,7 +28,7 @@ function App() {
 
     useEffect(() => {
         socket
-            .on('init', ({ id: ClientToken }) => {
+            .on('init', ({ token: ClientToken }) => {
                 document.title = `${ClientToken} - Video Call`;
                 setClientToken(ClientToken)
             })

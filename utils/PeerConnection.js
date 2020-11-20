@@ -70,13 +70,13 @@ class PeerConnection extends Emitter {
 
     getDescription(description) {
         this.peerConnection.setLocalDescription(description);
-        socket.emit('call', {to: this.friendToken, sdp: description});
+        socket.emit('call', {to: this.friendToken, SDP: description});
         return this;
     }
 
 
-    setRemoteDescription(sdp) {
-        const rtcSDP = new RTCSessionDescription(sdp);
+    setRemoteDescription(SDP) {
+        const rtcSDP = new RTCSessionDescription(SDP);
         this.peerConnection.setRemoteDescription(rtcSDP);
         return this;
     }

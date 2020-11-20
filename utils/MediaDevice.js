@@ -27,17 +27,17 @@ class MediaDevice extends Emitter {
                 } else {
                     console.log(err);
                 }
-            })
+            });
 
         return this
     }
 
     toggle(type, on) {
-        const length = arguments.length
+        const length = arguments.length;
         if (this.stream) {
             this.stream[`get${type}Tracks`]().forEach(track => {
                 const state = length === 2 ? on : !track.enabled;
-                _.set(track, 'enable', state);
+                _.set(track, 'enabled', state);
             });
         }
         return this;
@@ -45,7 +45,7 @@ class MediaDevice extends Emitter {
 
     stop() {
         if (this.stream) {
-            this.stream.getTracks().forEach(track => track.stop())
+            this.stream.getTracks().forEach(track => track.stop());
         }
         return this;
     }
