@@ -8,12 +8,6 @@ import socket from '../../utils/socket';
 import PeerConnection from '../../utils/PeerConnection';
 import _ from 'lodash';
 
-
-//So it has been established that the bane of my already misreable existence for the past few days has been this particular file.
-//There's something wrong with the second on() method in startCallHandler() 
-// The one that takes in peerStream event as it's argument, the bastard simply won't run!!!
-// God my head fucking hurts!
-
 let peerConnection = {};
 let callConfig = null;
 
