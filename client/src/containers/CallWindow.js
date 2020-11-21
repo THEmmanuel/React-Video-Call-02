@@ -13,28 +13,28 @@ const CallWindow = (callWindowStatus, localSrc, peerSrc, config, mediaDevice, en
     const [audio, setAudio] = useState(callWindowStatus.config.audio);
 
     useEffect(() => {
-        if (peerVideo.current && peerSrc) peerVideo.current.srcObject = callWindowStatus.peerSrc;
-        if (localVideo.current && localSrc) localVideo.current.srcObject = callWindowStatus.localSrc;
+        if (peerVideo.current && callWindowStatus.peerSrc) peerVideo.current.srcObject = callWindowStatus.peerSrc;
+        if (localVideo.current && callWindowStatus.localSrc) localVideo.current.srcObject = callWindowStatus.localSrc;
         console.log('useEffect01 ran')
     });
 
     useEffect(() => {
-        if (mediaDevice) {
-            mediaDevice.toggle('Video', video);
-            mediaDevice.toggle('Audio', audio);
+        if (callWindowStatus.mediaDevice) {
+            callWindowStatus.mediaDevice.toggle('Video', video);
+            callWindowStatus.mediaDevice.toggle('Audio', audio);
         }
-        console.log('useEffect02 ran')
+        console.log(mediaDevice + ' from callWndow useEffect')
     });
 
     const toggleMediaDevice = deviceType => {
         if (deviceType === 'video') {
             setVideo(!video);
-            mediaDevice.toggle('Video');
+            callWindowStatus.mediaDevice.toggle('Video');
         }
 
         if (deviceType === 'audio') {
             setAudio(!audio);
-            mediaDevice.toggle('Audio');
+            callWindowStatus.mediaDevice.toggle('Audio');
         }
     }
 
