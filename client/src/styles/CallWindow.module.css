@@ -21,16 +21,14 @@
 }
 
 .LocalVideo {
-    width: 100%;
+    width: 50%;
     height: 100%;
     display: block;
 }
 
 .PeerVideo {
-    width: 30%;
-    height: 30%;
-    background-color: green;
-    position: fixed;
+    width: 50%;
+    height: 100%;
     display: block;
 }
 
