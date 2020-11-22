@@ -16,22 +16,16 @@ const MainWindow = ({ clientToken, startCall }) => {
     // let greetingText = '';
 
     const setGreetingText = () => {
-        const hours = 23;
-        // const hours = new Date().getHours();
-        if (hours >= 0 && hours <= 11) {
-            return 'Good Morning!';
-        }
-        if (hours === 24) {
-            return 'Good Morning!'
-        }
-        if (hours >= 12 && hours <= 15) {
-            return 'Good Afternoon!';
-        }
-        if (hours >= 16 && hours <= 23) {
-            return 'Good Evening!';
-        }
+        const hours = new Date().getHours();
+
+        if (hours >= 0 && hours <= 11) return 'Good Morning!';
+        if (hours === 24) return 'Good Morning!'
+        if (hours >= 12 && hours <= 15) return 'Good Afternoon!';
+        if (hours >= 16 && hours <= 23) return 'Good Evening!';
         return 'Good Day!';
     }
+
+
 
 
     return (
@@ -39,7 +33,7 @@ const MainWindow = ({ clientToken, startCall }) => {
             <section className={style.SectionControls}>
                 <div className={style.MainControls}>
                     <div className={style.MainControls01}>
-                        <span className = {style.GreetingText}>
+                        <span className={style.GreetingText}>
                             {setGreetingText()}
                         </span>
 
