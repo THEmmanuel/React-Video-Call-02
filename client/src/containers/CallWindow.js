@@ -48,8 +48,12 @@ const CallWindow = (
 
             <div className={style.VideoContainers}>
 
-                <div className = {style.VideoContainer}>
-                    <span>{`${callWindowStatus.clientToken} - You`}</span>
+                <div className={style.VideoContainer}>
+                    <span
+                        className={style.UserTokenDisplay}>
+                        {`${callWindowStatus.clientToken} - You`}
+                    </span>
+
                     <video
                         className={style.LocalVideo}
                         ref={localVideo}
@@ -58,8 +62,11 @@ const CallWindow = (
                     </video>
                 </div>
 
-                <div className = {style.VideoContainer}>
-                    <span>{callWindowStatus.friendToken}</span>
+                <div className={style.VideoContainer}>
+                    <span className={style.UserTokenDisplay}>
+                        {callWindowStatus.friendToken}
+                    </span>
+
                     <video
                         className={style.PeerVideo}
                         ref={peerVideo}
