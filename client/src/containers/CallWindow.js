@@ -46,19 +46,27 @@ const CallWindow = (
             ? style.CallWindow
             : style.CallWindowInactive}>
 
-            <div className={style.VideoContainer}>
-                <video
-                    className={style.LocalVideo}
-                    ref={localVideo}
-                    autoPlay
-                    muted>
-                </video>
+            <div className={style.VideoContainers}>
 
-                <video
-                    className={style.PeerVideo}
-                    ref={peerVideo}
-                    autoPlay>
-                </video>
+                <div className = {style.VideoContainer}>
+                    <span>{`${callWindowStatus.clientToken} - You`}</span>
+                    <video
+                        className={style.LocalVideo}
+                        ref={localVideo}
+                        autoPlay
+                        muted>
+                    </video>
+                </div>
+
+                <div className = {style.VideoContainer}>
+                    <span>{callWindowStatus.friendToken}</span>
+                    <video
+                        className={style.PeerVideo}
+                        ref={peerVideo}
+                        autoPlay>
+                    </video>
+                </div>
+
             </div>
 
             <div className={style.CallButtons}>
