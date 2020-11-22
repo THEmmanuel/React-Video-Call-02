@@ -32,7 +32,7 @@
     display: block;
 }
 
-.CallButtons{
+.CallButtons {
     z-index: 1999;
     position: fixed;
     display: block;
@@ -42,7 +42,7 @@
     width: 100%;
 }
 
-.HangupButton{
+.HangupButton {
     background-color: red;
     margin-left: 0;
 }
