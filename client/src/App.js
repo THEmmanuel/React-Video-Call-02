@@ -95,6 +95,8 @@ function App() {
                     peerSrc={peerSrc}
                     config={callConfig}
                     mediaDevice={peerConnection.mediaDevice}
+                    clientToken = {ClientToken}
+                    friendToken = {CallFrom}
                     endCall={() => endCallHandler()}
                 />
             ) : null}

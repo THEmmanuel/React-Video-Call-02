@@ -2,7 +2,15 @@ import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import style from '../styles/CallWindow.module.css';
 
-const CallWindow = (callWindowStatus, localSrc, peerSrc, config, mediaDevice, endCall) => {
+const CallWindow = (
+    callWindowStatus,
+    localSrc,
+    peerSrc,
+    config,
+    mediaDevice,
+    endCall,
+    clientToken,
+    friendToken) => {
     const peerVideo = useRef(null);
     const localVideo = useRef(null);
 
