@@ -58,8 +58,6 @@ function App() {
             .on('peerStream', (src) => { setPeerSrc(src) })
 
             .start(isCaller, config);
-
-        console.log(peerConnection);
     }
 
 
@@ -95,8 +93,8 @@ function App() {
                     peerSrc={peerSrc}
                     config={callConfig}
                     mediaDevice={peerConnection.mediaDevice}
-                    clientToken = {ClientToken}
-                    friendToken = {CallFrom}
+                    clientToken={ClientToken}
+                    friendToken={CallFrom}
                     endCall={() => endCallHandler()}
                 />
             ) : null}

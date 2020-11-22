@@ -9,11 +9,8 @@ const MainWindow = ({ clientToken, startCall }) => {
 
     const callWithVideo = video => {
         const config = { audio: true, video };
-        console.log('callWithVideo from MainWindow.js');
         return () => FriendToken && startCall(true, FriendToken, config);
     };
-
-    // let greetingText = '';
 
     const setGreetingText = () => {
         const hours = new Date().getHours();

@@ -17,6 +17,7 @@ const CallWindow = (
     const [video, setVideo] = useState(callWindowStatus.config.video);
     const [audio, setAudio] = useState(callWindowStatus.config.audio);
 
+    
     useEffect(() => {
         if (peerVideo.current && callWindowStatus.peerSrc) peerVideo.current.srcObject = callWindowStatus.peerSrc;
         if (localVideo.current && callWindowStatus.localSrc) localVideo.current.srcObject = callWindowStatus.localSrc;
