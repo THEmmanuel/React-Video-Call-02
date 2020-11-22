@@ -34,6 +34,14 @@ section {
     background-image: url(/assets/ic_content_copy_24px.png);
 }
 
+.VideoCallButton{
+    background-image: url(/assets/ic_videocam_24px.png);
+}
+
+.AudioCallButton {
+    background-image: url(/assets/ic_phone_24px.png);
+}
+
 .IDInput {
     background-color: #C6E4D9;
     border-radius: 6px;
