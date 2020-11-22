@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import style from '../styles/CallWindow.module.css';
 
 const CallWindow = (callWindowStatus, localSrc, peerSrc, config, mediaDevice, endCall) => {
-    console.log(config);
-    console.log(callWindowStatus.config);
-
     const peerVideo = useRef(null);
     const localVideo = useRef(null);
 
@@ -15,7 +12,6 @@ const CallWindow = (callWindowStatus, localSrc, peerSrc, config, mediaDevice, en
     useEffect(() => {
         if (peerVideo.current && callWindowStatus.peerSrc) peerVideo.current.srcObject = callWindowStatus.peerSrc;
         if (localVideo.current && callWindowStatus.localSrc) localVideo.current.srcObject = callWindowStatus.localSrc;
-        console.log('useEffect01 ran')
     });
 
     useEffect(() => {
@@ -23,7 +19,6 @@ const CallWindow = (callWindowStatus, localSrc, peerSrc, config, mediaDevice, en
             callWindowStatus.mediaDevice.toggle('Video', video);
             callWindowStatus.mediaDevice.toggle('Audio', audio);
         }
-        console.log(mediaDevice + ' from callWndow useEffect')
     });
 
     const toggleMediaDevice = deviceType => {
@@ -100,5 +95,7 @@ CallWindow.propTypes = {
     mediaDevice: PropTypes.object,
     endCall: PropTypes.func.isRequired
 }
+
+// Todo, display caller tokens atop each video element.
 
 export default CallWindow;
