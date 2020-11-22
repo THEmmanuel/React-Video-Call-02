@@ -28,8 +28,9 @@ section {
 .CopyButton{
     display: inline-block;
     width: 25px;
-    height: 30px;
+    height: 25px;
     border-radius: 6px;
+    margin: 0;
 }
 
 .IDInput {
@@ -75,6 +76,16 @@ button {
 .GenerateInstruction {
     font-weight: 200;
     font-size: 0.9rem;
+}
+
+.TokenDetails{
+    display: flex;
+    flex-direction: row;
+}
+
+.TokenDetails span{
+    width: auto;
+    margin-right: 10px;
 }
 
 .MainBackground {

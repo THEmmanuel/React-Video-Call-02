@@ -25,9 +25,6 @@ const MainWindow = ({ clientToken, startCall }) => {
         return 'Good Day!';
     }
 
-
-
-
     return (
         <div className={style.MainWindow}>
             <section className={style.SectionControls}>
@@ -37,16 +34,16 @@ const MainWindow = ({ clientToken, startCall }) => {
                             {setGreetingText()}
                         </span>
 
-                        <div className = {style.TokenDetails}>
+                        <div className={style.TokenDetails}>
                             <span>
-                                Your caller ID is <span className={style.CallerID}>{clientToken}</span>.
+                                Your caller ID is <span className={style.CallerID}>{clientToken}</span>
                         </span>
 
                             <button
                                 className={style.CopyButton}
                                 onClick={() => navigator.clipboard.writeText(clientToken)}
                             />
-                            </div>
+                        </div>
 
                         <span className={style.GenerateInstruction}>You can reload this page to generate a new Caller ID.</span>
                     </div>
