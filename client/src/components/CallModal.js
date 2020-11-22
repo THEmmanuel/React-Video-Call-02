@@ -19,9 +19,21 @@ const CallModal = ({ status, callFrom, startCall, rejectCall }) => {
                 </span>
 
                 <div className={style.CallModalButtons}>
-                    <button className={style.ModalButton} type='button' onClick={acceptWithVideo(true)}></button>
-                    <button className={style.ModalButton} type='button' onClick={acceptWithVideo(false)}></button>
-                    <button className={style.RejectCallButton} type='button' onClick={rejectCall}></button>
+                    <button
+                        className={style.VideoCallButton}
+                        type='button'
+                        onClick={acceptWithVideo(true)}></button>
+
+                    <button
+                        className={style.AudioCallButton}
+                        type='button'
+                        onClick={acceptWithVideo(false)}></button>
+
+                    <button
+                        className={style.RejectCallButton}
+                        type='button'
+                        onClick={rejectCall}></button>
+
                 </div>
             </div>
         </div>

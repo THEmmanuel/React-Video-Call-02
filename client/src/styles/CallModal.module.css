@@ -30,14 +30,19 @@
     margin-bottom: 30px;
 }
 
-.ModalButton {
-    background-color: #345A30;
+.VideoCallButton{
+    background-image: url('/assets//ic_videocam_24px.png');
+}
+
+.AudioCallButton{
+    background-image: url('/assets/ic_phone_24px.png');
 }
 
 .RejectCallButton {
-    background-color: #E81123;
+    background-color: #E81123 !important;
+    background-image: url('/assets/ic_call_end_24px.png');
 }
 
-.button{
-    /* padding-left: 5px; */
+.CallModalButtons button{
+    background-color: #345A30;
 }

@@ -25,12 +25,14 @@
     width: 50%;
     height: 100%;
     display: block;
+    background: #2E2D2D;
 }
 
 .PeerVideo {
     width: 50%;
     height: 100%;
     display: block;
+    background: #2E2D2D;
 }
 
 .CallButtons {
