@@ -47,7 +47,7 @@
     bottom: 5%;
     margin: auto;
     left: 50vw;
-    width: 320px;
+    width: fit-content;
 }
 
 .HangupButton {
@@ -60,4 +60,5 @@
     background: #1F1F1F;
     width: fit-content;
     height: 30px;
+    padding: 5px;
 }
