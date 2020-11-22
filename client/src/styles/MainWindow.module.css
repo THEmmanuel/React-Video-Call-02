@@ -25,7 +25,12 @@ section {
     text-align: left;
 }
 
-.InstructionText {}
+.CopyButton{
+    display: inline-block;
+    width: 25px;
+    height: 30px;
+    border-radius: 6px;
+}
 
 .IDInput {
     background-color: #C6E4D9;
