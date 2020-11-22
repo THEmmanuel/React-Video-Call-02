@@ -27,10 +27,11 @@ section {
 
 .CopyButton{
     display: inline-block;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     border-radius: 6px;
     margin: 0;
+    background-image: url(/assets/ic_content_copy_24px.png);
 }
 
 .IDInput {
@@ -62,6 +63,8 @@ button {
     border-radius: 50%;
     background-color: #305A55;
     transition: all 1s;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .MainControls01 {
