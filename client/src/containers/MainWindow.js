@@ -37,7 +37,7 @@ const MainWindow = ({ clientToken, startCall }) => {
                         <div className={style.TokenDetails}>
                             <span>
                                 Your caller ID is <span className={style.CallerID}>{clientToken}</span>
-                        </span>
+                            </span>
 
                             <button
                                 className={style.CopyButton}
@@ -61,9 +61,15 @@ const MainWindow = ({ clientToken, startCall }) => {
 
                     <div>
                         {/* Calls with video and audio enabled */}
-                        <button onClick={callWithVideo(true)}></button>
+                        <button
+                            className={style.VideoCallButton}
+                            onClick={callWithVideo(true)}
+                        ></button>
                         {/* Calls with only audio enabled */}
-                        <button onClick={callWithVideo(false)}></button>
+                        <button
+                            className={style.AudioCallButton}
+                            onClick={callWithVideo(false)}
+                        ></button>
                     </div>
                 </div>
             </section>
