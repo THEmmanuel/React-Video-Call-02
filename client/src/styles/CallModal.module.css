@@ -23,6 +23,7 @@
 
 .CallModalButtons{
     margin: auto;
+    width: fit-content;
 }
 
 .CallText {
@@ -41,6 +42,7 @@
 .RejectCallButton {
     background-color: #E81123 !important;
     background-image: url('/assets/ic_call_end_24px.png');
+    margin-right: 0;
 }
 
 .CallModalButtons button{

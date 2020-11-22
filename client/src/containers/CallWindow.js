@@ -114,6 +114,4 @@ CallWindow.propTypes = {
     friendToken: PropTypes.string.isRequired
 }
 
-// Todo, display caller tokens atop each video element.
-
 export default CallWindow;
