@@ -54,3 +54,10 @@
     background-color: red;
     margin-left: 0;
 }
+
+.UserTokenDisplay {
+    color: #E3E9E8;
+    background: #1F1F1F;
+    width: fit-content;
+    height: 30px;
+}
