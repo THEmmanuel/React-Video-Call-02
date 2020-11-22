@@ -93,7 +93,9 @@ CallWindow.propTypes = {
         video: PropTypes.bool.isRequired
     }).isRequired,
     mediaDevice: PropTypes.object,
-    endCall: PropTypes.func.isRequired
+    endCall: PropTypes.func.isRequired,
+    clientToken: PropTypes.string.isRequired,
+    friendToken: PropTypes.string.isRequired
 }
 
 // Todo, display caller tokens atop each video element.
