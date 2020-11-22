@@ -40,7 +40,12 @@ const MainWindow = ({ clientToken, startCall }) => {
                         <span>
                             Your caller ID is <span className={style.CallerID}>{clientToken}</span>.
                         </span>
-                        {/* Add copy button here later */}
+
+                        <button
+                            className={style.copyButton}
+                            onClick = {() => navigator.clipboard.writeText(clientToken)}
+                        />
+
                         <span className={style.GenerateInstruction}>You can reload this page to generate a new Caller ID.</span>
                     </div>
 
