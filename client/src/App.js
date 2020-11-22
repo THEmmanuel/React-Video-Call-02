@@ -64,7 +64,6 @@ function App() {
     const rejectCallHandler = () => {
         socket.emit('end', { to: CallFrom });
         setcallModal('')
-        setCallFrom('')
     }
 
 
@@ -74,7 +73,6 @@ function App() {
         }
         peerConnection = {};
         callConfig = null;
-        // setConfig(null)
         setCallWindow('');
         setcallModal('');
         setLocalSrc(null);
