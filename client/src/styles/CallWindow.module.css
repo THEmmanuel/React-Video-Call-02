@@ -45,7 +45,9 @@
     position: fixed;
     display: block;
     bottom: 5%;
-    margin: auto;
+    margin: 10px auto 10px auto;
+    padding: auto;
+    align-self: center;
     left: 50vw;
     width: fit-content;
 }
@@ -74,4 +76,15 @@
 
 .HangupButton:hover{
     background-color: #59030A;
+}
+
+@media(max-width: 500px) {
+    .VideoContainers{
+        flex-direction: column;
+        height: 80%;
+    }
+
+    .VideoContainer{
+        width: 100%;
+    }
 }

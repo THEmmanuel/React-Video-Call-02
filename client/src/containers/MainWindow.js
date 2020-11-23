@@ -12,7 +12,7 @@ const MainWindow = ({ clientToken, startCall }) => {
         return () => FriendToken && startCall(true, FriendToken, config);
     };
 
-    const setGreetingText = () => {
+    const setGreetingTextHandler = () => {
         const hours = new Date().getHours();
 
         if (hours >= 0 && hours <= 11) return 'Good Morning!';
@@ -28,7 +28,7 @@ const MainWindow = ({ clientToken, startCall }) => {
                 <div className={style.MainControls}>
                     <div className={style.MainControls01}>
                         <span className={style.GreetingText}>
-                            {setGreetingText()}
+                            {setGreetingTextHandler()}
                         </span>
 
                         <div className={style.TokenDetails}>
