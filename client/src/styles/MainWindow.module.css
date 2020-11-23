@@ -46,7 +46,9 @@ section {
     background-color: #C6E4D9;
     border-radius: 6px;
     border: none;
-    width: 320px;
+    max-width: 320px;
+    width: 100%;
+    min-width: 200px;
     height: 32px;
     margin-top: 20px;
     margin-bottom: 30px;
@@ -79,6 +81,10 @@ button {
     margin-bottom: 25px;
 }
 
+.MainControls02 {
+    width: 100%;
+}
+
 .CallerID {
     display: inline;
     font-weight: 700;
@@ -95,7 +101,7 @@ button {
 }
 
 .TokenDetails span {
-    width: 250px;
+    /* width: 250px; */
     margin-right: 10px;
 }
 
@@ -118,10 +124,13 @@ button:hover {
 
     section {
         width: 100%;
-        /* height: 50vh; */
     }
 
     .MainBackground {
         display: none;
+    }
+
+    .MainWindow {
+        position: relative;
     }
 }
