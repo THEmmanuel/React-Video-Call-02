@@ -51,7 +51,7 @@
 }
 
 .HangupButton {
-    background-color: red;
+    background-color: #E81123;
     margin-left: 0;
 }
 
@@ -61,4 +61,8 @@
     width: fit-content;
     height: 30px;
     padding: 5px;
+}
+
+.HangupButton:hover{
+    background-color: #59030A;
 }
