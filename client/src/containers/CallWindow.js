@@ -17,7 +17,7 @@ const CallWindow = (
     const [video, setVideo] = useState(callWindowStatus.config.video);
     const [audio, setAudio] = useState(callWindowStatus.config.audio);
 
-    
+
     useEffect(() => {
         if (peerVideo.current && callWindowStatus.peerSrc) peerVideo.current.srcObject = callWindowStatus.peerSrc;
         if (localVideo.current && callWindowStatus.localSrc) localVideo.current.srcObject = callWindowStatus.localSrc;
@@ -78,31 +78,33 @@ const CallWindow = (
             </div>
 
             <div className={style.CallButtons}>
-                <button
-                    key='videoButton'
-                    type='button'
-                    className={style.VideoButton}
-                    onClick={() => toggleMediaDevice('video')}
-                >
-                </button>
+                <div className={style.ButtonContainer}>
+                    <button
+                        key='videoButton'
+                        type='button'
+                        className={style.VideoButton}
+                        onClick={() => toggleMediaDevice('video')}
+                    >
+                    </button>
 
 
-                <button
-                    key='audioButton'
-                    type='button'
-                    className={style.AudioButton}
-                    onClick={() => toggleMediaDevice('audio')}
-                >
-                </button>
+                    <button
+                        key='audioButton'
+                        type='button'
+                        className={style.AudioButton}
+                        onClick={() => toggleMediaDevice('audio')}
+                    >
+                    </button>
 
 
-                <button
-                    key='hangupButton'
-                    type='button'
-                    className={style.HangupButton}
-                    onClick={() => callWindowStatus.endCall(true)}
-                ></button>
+                    <button
+                        key='hangupButton'
+                        type='button'
+                        className={style.HangupButton}
+                        onClick={() => callWindowStatus.endCall(true)}
+                    ></button>
 
+                </div>
             </div>
         </div>
     )

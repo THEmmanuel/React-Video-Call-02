@@ -42,13 +42,18 @@
 
 .CallButtons {
     z-index: 1999;
-    position: fixed;
+    position: absolute;
     display: block;
     bottom: 5%;
     margin: 10px auto 10px auto;
     padding: auto;
     align-self: center;
-    left: 50vw;
+    /* left: 50%; */
+    width: 100%;
+}
+
+.ButtonContainer{
+    margin: auto;
     width: fit-content;
 }
 
@@ -62,7 +67,7 @@
 
 .HangupButton {
     background-color: #E81123;
-    margin-left: 0;
+    margin-right: auto;
     background-image: url('/assets/ic_call_end_24px.png');
 }
 
