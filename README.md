@@ -8,6 +8,7 @@ Demo app hosted here:
 * Express
 * WebRTC API
 * Socket.IO
+* Lodash
 * WebPack
 * CSS3
 * Babel
