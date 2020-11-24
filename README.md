@@ -32,7 +32,6 @@ Clone this repository
 
 #### Start development server
 `yarn watch:client`
-
 **Runs at port 9000**
 
 ### Attribution:
