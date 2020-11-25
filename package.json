@@ -31,7 +31,7 @@
   },
   "scripts": {
     "start": "node server/index.js",
-    "build": "webpack --config webpack-prod.config.js",
+    "build": "cd client && webpack --config webpack-prod.config.js",
     "watch:client": "webpack-dev-server --config webpack-dev.config.js",
     "watch:server": "nodemon server/index.js",
     "test": "react-scripts test",
