@@ -1,0 +1,290 @@
+._1yE3QwtSv6EXXwxvkRow1H {
+    display: flex;
+    flex-direction: row;
+    background-color: #F3FFFB;
+    color: #F5F7F7;
+}
+
+.httUh8hpk9wRrOivMeFdG {
+    background-color: #1B4A43;
+}
+
+section {
+    display: block;
+    height: 100vh;
+    width: 50%;
+}
+
+.-zArpIxOzT2E2iY_tK842 {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    text-align: left;
+}
+
+._31FvhiCwY1FDWsOovnYaJL {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    margin: 0;
+    background-image: url(/dist/assets/ic_content_copy_24px.png);
+}
+
+._3jcBzT5S3xS4f06rrNKKXV {
+    background-image: url(/dist/assets/ic_videocam_24px.png);
+}
+
+.YqVj3QDEnWYpzn660uNT6 {
+    background-image: url(/dist/assets/ic_phone_24px.png);
+}
+
+._9LvVR7O53pbAdzrv_DiQ_ {
+    background-color: #C6E4D9;
+    border-radius: 6px;
+    border: none;
+    max-width: 320px;
+    width: 100%;
+    min-width: 200px;
+    height: 32px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #305A55;
+    font-size: 1.2rem;
+    padding: 2px;
+}
+
+span {
+    display: block;
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 450;
+    text-align: left;
+}
+
+button {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 50%;
+    background-color: #305A55;
+    transition: all 1s;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+._24EQ6lDRw6HknkEq4Ns0ZK {
+    margin-bottom: 25px;
+}
+
+._25Hk4IG9fsvuaM5N9q1wB4 {
+    width: 100%;
+}
+
+.lMm-AhB8weeHgfXazC1wQ {
+    display: inline;
+    font-weight: 700;
+}
+
+.inF5RvoIr_tKTNIJ0F5Bs {
+    font-weight: 200;
+    font-size: 0.9rem;
+}
+
+._1P3OQdR0h0aasAFcHDgFkd {
+    display: flex;
+    flex-direction: row;
+}
+
+._1P3OQdR0h0aasAFcHDgFkd span {
+    /* width: 250px; */
+    margin-right: 10px;
+}
+
+._3R_mvwIzNJ157UsBL-JxSm {
+    background-image: url(/dist/assets/undraw_group_video_el8e.svg);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-color: #F3FFFB;
+    background-position: 50%;
+}
+
+button:hover {
+    background-color: #1F423E;
+}
+
+@media(max-width: 1000px) {
+    ._1yE3QwtSv6EXXwxvkRow1H {
+        flex-direction: column;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    ._3R_mvwIzNJ157UsBL-JxSm {
+        display: none;
+    }
+
+    ._1yE3QwtSv6EXXwxvkRow1H {
+        position: relative;
+    }
+}
+.redNjr1J62EkhbR0Uulqm {
+    position: fixed;
+    /* left: 40vw; */
+    top: 50vh;
+    display: block;
+    width: 100%;
+    margin: auto;
+    /* display: block; */
+    z-index: 200;
+}
+
+._1ufc346IKBAjVouabYoL8u {
+    display: none;
+}
+
+._3WC0trYBLdzTmOvPD4z9nH {
+    margin: auto;
+    width: fit-content;
+    min-width: 280px;
+    max-width: 350px;
+    padding: 5px;
+    background-color: #305A55;
+    border-radius: 6px;
+}
+
+._11YOHStMiZsbweWCS50t_T {
+    margin: auto;
+    width: fit-content;
+}
+
+._1UconupMfBFoNUiD6YmCiE {
+    color: #E3E9E8;
+    margin: 0px auto 25px auto;
+    text-align: center;
+}
+
+._1_htNpjJzrkMzd3nAuRUce {
+    background-image: url(/dist/assets/ic_videocam_24px.png);
+}
+
+.Bn9a8PHaFA5p-7cVYkDi_ {
+    background-image: url(/dist/assets/ic_phone_24px.png);
+}
+
+._3OVfd45SFRWy6mufldESao {
+    background-color: #E81123 !important;
+    background-image: url(/dist/assets/ic_call_end_24px.png);
+    margin-right: 0;
+}
+
+._11YOHStMiZsbweWCS50t_T button {
+    background-color: #345A30;
+}
+._15Io083qLGi2cOslWlTqSi {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 999;
+    display: block;
+    margin: auto;
+    background-color: #1F1F1F;
+}
+
+._22BCnHu_6H2sxvU_bq8WHA {
+    display: none;
+}
+
+._3OG9kivzmBBWStxnqBZ7MA {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+._2WADc5zDWomVomlt1UdGhG {
+    width: 50%;
+    height: 100%;
+    display: block;
+    background: #2E2D2D;
+}
+
+._3KBCARW-t_Wmd7ArvC2avf {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+._2LPHiTnjONGwpXAafmvMQn {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+._1SnoNR4HAG5mPCW20uoSBG {
+    z-index: 1999;
+    position: absolute;
+    display: block;
+    bottom: 5%;
+    margin: 10px auto 10px auto;
+    padding: auto;
+    align-self: center;
+    /* left: 50%; */
+    width: 100%;
+}
+
+.FdwJKTGNk4_vtiE_nNCHn{
+    margin: auto;
+    width: fit-content;
+}
+
+._1AOvQeKHRYx8sgTTJSsOdb{
+    background-image: url(/dist/assets/ic_videocam_24px.png);
+}
+
+.fVb_ZBzc7w9A4RG3Nc38D{
+    background-image: url(/dist/assets/ic_mic_off_24px.png);
+}
+
+._2Tw2l8HbW5ZkklMA2VOdE4 {
+    background-color: #E81123;
+    margin-right: auto;
+    background-image: url(/dist/assets/ic_call_end_24px.png);
+}
+
+._3Lq6i_L9-WgMvbsubtDz4w {
+    color: #E3E9E8;
+    background: #1F1F1F;
+    width: fit-content;
+    height: 25px;
+    padding: 5px;
+}
+
+._2Tw2l8HbW5ZkklMA2VOdE4:hover{
+    background-color: #59030A;
+}
+
+@media(max-width: 500px) {
+    ._3OG9kivzmBBWStxnqBZ7MA{
+        flex-direction: column;
+        height: 85%;
+    }
+
+    ._2WADc5zDWomVomlt1UdGhG{
+        width: 100%;
+    }
+}
+
+body {
+    margin: 0;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

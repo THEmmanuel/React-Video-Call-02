@@ -17,7 +17,7 @@ const configs = addBaseConfig({
         rules: [
             //Rules for global styling.
             {
-                test: /\.css/,
+                test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
                 exclude: /\.module\.css$/
             },

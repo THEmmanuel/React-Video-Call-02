@@ -12,9 +12,9 @@ const configs = addBaseConfig({
 
     module: {
         rules: [{
-                test: /\.css/,
+                test: /\.css$/,
                 use: [
-                    MiniCssExtractPlugin,
+                    MiniCssExtractPlugin.loader,
                     'css-loader'
                 ]
             },
@@ -42,10 +42,12 @@ const configs = addBaseConfig({
         })
     ],
     optimization: {
-        minimizer:[
+        minimizer: [
             new TerserPlugin({
                 parallel: true,
-                terserOptions: {ecma: 6}
+                terserOptions: {
+                    ecma: 6
+                }
             })
         ]
     }
