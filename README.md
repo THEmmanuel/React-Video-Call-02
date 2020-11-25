@@ -20,17 +20,17 @@ Everytime you reload the page or open a new tab, a new token gets generated.
 Send your token to your friend to make video and/or voice calls.
 
 #### Development:
-Clone this repository
+###### Clone this repository
 `git clone https://github.com/THEmmanuel/React-Video-Call-02` 
 
-#### Install dependencies:
+###### Install dependencies:
 `yarn install`
 
-#### Start server:
+###### Start server:
 `yarn watch:server`
 **Runs at port 5000**
 
-#### Start development server
+###### Start development server
 `yarn watch:client`
 **Runs at port 9000**
 
