@@ -19,7 +19,7 @@ const configs = addBaseConfig({
                 ]
             },
             {
-                test: /\.(png|woff!woff2|eot|ttf|svg)$/,
+                test: /\.(png|woff|woff2|eot|ttf|svg)$/,
                 use: [{
                     loader: 'file-loader',
                     options: {
