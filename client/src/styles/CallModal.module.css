@@ -1,11 +1,9 @@
 .CallModal {
     position: fixed;
-    /* left: 40vw; */
     top: 50vh;
     display: block;
     width: 100%;
     margin: auto;
-    /* display: block; */
     z-index: 200;
 }
 
