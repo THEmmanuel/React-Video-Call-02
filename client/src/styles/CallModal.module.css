@@ -1,13 +1,11 @@
 .CallModal {
     position: fixed;
-    left: 40vw;
+    /* left: 40vw; */
     top: 50vh;
     display: block;
-    width: 20%;
-    background-color: #305A55;
+    width: 100%;
     margin: auto;
-    border-radius: 6px;
-    display: block;
+    /* display: block; */
     z-index: 200;
 }
 
@@ -18,24 +16,29 @@
 .CallModalContent {
     margin: auto;
     width: fit-content;
+    min-width: 280px;
+    max-width: 350px;
     padding: 5px;
+    background-color: #305A55;
+    border-radius: 6px;
 }
 
-.CallModalButtons{
+.CallModalButtons {
     margin: auto;
     width: fit-content;
 }
 
 .CallText {
     color: #E3E9E8;
-    margin-bottom: 30px;
+    margin: 0px auto 25px auto;
+    text-align: center;
 }
 
-.VideoCallButton{
+.VideoCallButton {
     background-image: url('/assets//ic_videocam_24px.png');
 }
 
-.AudioCallButton{
+.AudioCallButton {
     background-image: url('/assets/ic_phone_24px.png');
 }
 
@@ -45,6 +48,12 @@
     margin-right: 0;
 }
 
-.CallModalButtons button{
+.CallModalButtons button {
     background-color: #345A30;
+}
+
+@media(max-width: 1000px) {
+    .CallModal {
+        /* width: fit-content; */
+    }
 }
