@@ -1,4 +1,3 @@
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const socketConfig = require('./config');
 const addBaseConfig = require('./webpack-base.config');
