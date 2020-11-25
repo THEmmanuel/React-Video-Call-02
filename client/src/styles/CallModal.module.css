@@ -13,6 +13,8 @@
 
 .CallModalContent {
     margin: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     min-width: 280px;
     max-width: 350px;
@@ -23,6 +25,8 @@
 
 .CallModalButtons {
     margin: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 

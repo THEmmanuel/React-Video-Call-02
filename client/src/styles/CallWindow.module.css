@@ -53,6 +53,8 @@
 
 .ButtonContainer{
     margin: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -73,6 +75,8 @@
 .UserTokenDisplay {
     color: #E3E9E8;
     background: #1F1F1F;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     height: 25px;
     padding: 5px;

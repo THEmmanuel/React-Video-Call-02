@@ -20,7 +20,7 @@ Everytime you reload the page or open a new tab, a new token gets generated.
 Send your token to your friend to make video and/or voice calls.
 
 #### Development:
-###### Clone this repository
+###### Clone this repository:
 `git clone https://github.com/THEmmanuel/React-Video-Call-02` 
 
 ###### Install dependencies:

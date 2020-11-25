@@ -17,6 +17,8 @@ section {
 
 .MainControls {
     display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin: auto;
     position: absolute;
