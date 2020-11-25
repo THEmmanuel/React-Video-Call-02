@@ -51,9 +51,3 @@
 .CallModalButtons button {
     background-color: #345A30;
 }
-
-@media(max-width: 1000px) {
-    .CallModal {
-        /* width: fit-content; */
-    }
-}

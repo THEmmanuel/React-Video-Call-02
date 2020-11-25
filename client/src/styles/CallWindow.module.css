@@ -75,7 +75,7 @@
     color: #E3E9E8;
     background: #1F1F1F;
     width: fit-content;
-    height: 30px;
+    height: 25px;
     padding: 5px;
 }
 
@@ -86,7 +86,7 @@
 @media(max-width: 500px) {
     .VideoContainers{
         flex-direction: column;
-        height: 80%;
+        height: 85%;
     }
 
     .VideoContainer{
