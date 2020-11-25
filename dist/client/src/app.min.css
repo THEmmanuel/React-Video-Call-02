@@ -101,7 +101,6 @@ button {
 }
 
 ._1P3OQdR0h0aasAFcHDgFkd span {
-    /* width: 250px; */
     margin-right: 10px;
 }
 
@@ -136,12 +135,10 @@ button:hover {
 }
 .redNjr1J62EkhbR0Uulqm {
     position: fixed;
-    /* left: 40vw; */
     top: 50vh;
     display: block;
     width: 100%;
     margin: auto;
-    /* display: block; */
     z-index: 200;
 }
 
@@ -237,7 +234,6 @@ button:hover {
     margin: 10px auto 10px auto;
     padding: auto;
     align-self: center;
-    /* left: 50%; */
     width: 100%;
 }
 
