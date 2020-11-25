@@ -17,6 +17,8 @@ section {
 
 .-zArpIxOzT2E2iY_tK842 {
     display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin: auto;
     position: absolute;
@@ -148,6 +150,8 @@ button:hover {
 
 ._3WC0trYBLdzTmOvPD4z9nH {
     margin: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     min-width: 280px;
     max-width: 350px;
@@ -158,6 +162,8 @@ button:hover {
 
 ._11YOHStMiZsbweWCS50t_T {
     margin: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -239,6 +245,8 @@ button:hover {
 
 .FdwJKTGNk4_vtiE_nNCHn{
     margin: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -259,6 +267,8 @@ button:hover {
 ._3Lq6i_L9-WgMvbsubtDz4w {
     color: #E3E9E8;
     background: #1F1F1F;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     height: 25px;
     padding: 5px;
