@@ -38,7 +38,7 @@ const configs = addBaseConfig({
         new HtmlWebpackPlugin({
             title: 'React Video Caller - Emmanuel Ayodele',
             filename: path.join(__dirname, 'index.html'),
-            template: 'client/src/index.html'
+            template: 'src/index.html'
         })
     ],
     optimization: {

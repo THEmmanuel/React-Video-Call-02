@@ -1,5 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const socketConfig = require('./config');
+const socketConfig = require('../config');
 const addBaseConfig = require('./webpack-base.config');
 const {
     HotModuleReplacementPlugin
@@ -10,7 +10,7 @@ const configs = addBaseConfig({
     target: 'web',
     mode: 'development',
     output: {
-        filename: 'client/src/[name].js'
+        filename: 'src/[name].js'
     },
 
     module: {
@@ -55,7 +55,7 @@ const configs = addBaseConfig({
         new HtmlWebpackPlugin({
             title: 'React Video Caller - Emmanuel Ayodele',
             filename: 'index.html',
-            template: 'client/src/index.html'
+            template: 'src/index.html'
         })
     ],
     devServer: {
