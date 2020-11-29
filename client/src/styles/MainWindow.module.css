@@ -33,15 +33,15 @@ section {
     height: 30px;
     border-radius: 6px;
     margin: 0;
-    background-image: url(client/assets/ic_content_copy_24px.png);
+    background-image: url(https://ik.imagekit.io/t2vnkmzt25/vid/ic_content_copy_24px_nn9hfnP95dWCY.png);
 }
 
 .VideoCallButton {
-    background-image: url(/client/assets/ic_videocam_24px.png);
+    background-image: url(https://ik.imagekit.io/t2vnkmzt25/vid/ic_videocam_24px_kaXiZAv0JBc4.png);
 }
 
 .AudioCallButton {
-    background-image: url(/client/assets/ic_phone_24px.png);
+    background-image: url(https://ik.imagekit.io/t2vnkmzt25/vid/ic_phone_24px_mlUA0XN9EZVFn.png);
 }
 
 .IDInput {
@@ -107,7 +107,7 @@ button {
 }
 
 .MainBackground {
-    background-image: url(/client/assets/undraw_group_video_el8e.svg);
+    background-image: url(https://ik.imagekit.io/t2vnkmzt25/vid/download-icons8_MWG9Q0JuRAF7w.png);
     background-repeat: no-repeat;
     background-size: 60%;
     background-color: #F3FFFB;

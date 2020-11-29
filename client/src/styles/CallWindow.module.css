@@ -59,17 +59,17 @@
 }
 
 .VideoButton{
-    background-image: url('/client/assets/ic_videocam_24px.png');
+    background-image: url('https://ik.imagekit.io/t2vnkmzt25/vid/ic_videocam_24px_kaXiZAv0JBc4.png');
 }
 
 .AudioButton{
-    background-image: url('/client/assets/ic_mic_off_24px.png');
+    background-image: url('https://ik.imagekit.io/t2vnkmzt25/vid/ic_mic_off_24px_qXDNa_WnUGIU2.png');
 }
 
 .HangupButton {
     background-color: #E81123;
     margin-right: auto;
-    background-image: url('/client/assets/ic_call_end_24px.png');
+    background-image: url('https://ik.imagekit.io/t2vnkmzt25/vid/ic_call_end_24px_2r2CPYOw7P0kv.png');
 }
 
 .UserTokenDisplay {

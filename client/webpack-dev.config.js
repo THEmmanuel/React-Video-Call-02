@@ -43,7 +43,7 @@ const configs = addBaseConfig({
                 use: [{
                     loader: 'file-loader',
                     options: {
-                        name: 'assets/[name].[ext]',
+                        name: 'client/assets/[name].[ext]',
                         outputPath: 'assets'
                     }
                 }]

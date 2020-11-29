@@ -37,16 +37,16 @@
 }
 
 .VideoCallButton {
-    background-image: url('/client/assets/ic_videocam_24px.png');
+    background-image: url('https://ik.imagekit.io/t2vnkmzt25/vid/ic_videocam_24px_kaXiZAv0JBc4.png');
 }
 
 .AudioCallButton {
-    background-image: url('/client/assets/ic_phone_24px.png');
+    background-image: url('https://ik.imagekit.io/t2vnkmzt25/vid/ic_phone_24px_mlUA0XN9EZVFn.png');
 }
 
 .RejectCallButton {
     background-color: #E81123 !important;
-    background-image: url('/client/assets/ic_call_end_24px.png');
+    background-image: url('https://ik.imagekit.io/t2vnkmzt25/vid/ic_call_end_24px_2r2CPYOw7P0kv.png');
     margin-right: 0;
 }
 
