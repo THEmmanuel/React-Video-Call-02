@@ -33,15 +33,15 @@ section {
     height: 30px;
     border-radius: 6px;
     margin: 0;
-    background-image: url(/assets/ic_content_copy_24px.png);
+    background-image: url(client/assets/ic_content_copy_24px.png);
 }
 
 .VideoCallButton {
-    background-image: url(/assets/ic_videocam_24px.png);
+    background-image: url(/client/assets/ic_videocam_24px.png);
 }
 
 .AudioCallButton {
-    background-image: url(/assets/ic_phone_24px.png);
+    background-image: url(/client/assets/ic_phone_24px.png);
 }
 
 .IDInput {
@@ -107,7 +107,7 @@ button {
 }
 
 .MainBackground {
-    background-image: url(/assets/undraw_group_video_el8e.svg);
+    background-image: url(/client/assets/undraw_group_video_el8e.svg);
     background-repeat: no-repeat;
     background-size: 60%;
     background-color: #F3FFFB;

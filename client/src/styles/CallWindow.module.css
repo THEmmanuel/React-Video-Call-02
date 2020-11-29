@@ -59,17 +59,17 @@
 }
 
 .VideoButton{
-    background-image: url('/assets/ic_videocam_24px.png');
+    background-image: url('/client/assets/ic_videocam_24px.png');
 }
 
 .AudioButton{
-    background-image: url('/assets/ic_mic_off_24px.png');
+    background-image: url('/client/assets/ic_mic_off_24px.png');
 }
 
 .HangupButton {
     background-color: #E81123;
     margin-right: auto;
-    background-image: url('/assets/ic_call_end_24px.png');
+    background-image: url('/client/assets/ic_call_end_24px.png');
 }
 
 .UserTokenDisplay {

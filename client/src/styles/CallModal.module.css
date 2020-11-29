@@ -37,16 +37,16 @@
 }
 
 .VideoCallButton {
-    background-image: url('/assets//ic_videocam_24px.png');
+    background-image: url('/client/assets/ic_videocam_24px.png');
 }
 
 .AudioCallButton {
-    background-image: url('/assets/ic_phone_24px.png');
+    background-image: url('/client/assets/ic_phone_24px.png');
 }
 
 .RejectCallButton {
     background-color: #E81123 !important;
-    background-image: url('/assets/ic_call_end_24px.png');
+    background-image: url('/client/assets/ic_call_end_24px.png');
     margin-right: 0;
 }
 
