@@ -33,15 +33,15 @@ section {
     height: 30px;
     border-radius: 6px;
     margin: 0;
-    background-image: url(https://ik.imagekit.io/t2vnkmzt25/vid/ic_content_copy_24px_nn9hfnP95dWCY.png);
+    background-image: url('https://ik.imagekit.io/t2vnkmzt25/vid/ic_content_copy_24px_nn9hfnP95dWCY.png');
 }
 
 ._2sDZKEN1d_-wvf57R5Bh9c {
-    background-image: url(https://ik.imagekit.io/t2vnkmzt25/vid/ic_videocam_24px_kaXiZAv0JBc4.png);
+    background-image: url('https://ik.imagekit.io/t2vnkmzt25/vid/ic_videocam_24px_kaXiZAv0JBc4.png');
 }
 
 .NN59xuRTfvxqTfj4u3jdk {
-    background-image: url(https://ik.imagekit.io/t2vnkmzt25/vid/ic_phone_24px_mlUA0XN9EZVFn.png);
+    background-image: url('https://ik.imagekit.io/t2vnkmzt25/vid/ic_phone_24px_mlUA0XN9EZVFn.png');
 }
 
 ._1zDlN0JjcazW_N2GaPtzUN {
@@ -61,7 +61,7 @@ section {
 
 span {
     display: block;
-    width: 100%;
+    width: fit-content;
     font-size: 1.3rem;
     font-weight: 450;
     text-align: left;
@@ -103,11 +103,11 @@ button {
 }
 
 ._3qxPulotF8vxoZMuoCckWS span {
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .zogo4ybOR52N7TADqyXnC {
-    background-image: url(https://ik.imagekit.io/t2vnkmzt25/vid/download-icons8_MWG9Q0JuRAF7w.png);
+    background-image: url('https://ik.imagekit.io/t2vnkmzt25/vid/download-icons8_MWG9Q0JuRAF7w.png');
     background-repeat: no-repeat;
     background-size: 60%;
     background-color: #F3FFFB;
@@ -209,12 +209,12 @@ button:hover {
 ._27mPepz47jgSsnu9hsZdVV {
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
 ._2GmN_QFROcyhpeJxZBKKi_ {
-    width: 50%;
+    width: 100%;
     height: 100%;
     display: block;
     background: #2E2D2D;
@@ -243,18 +243,18 @@ button:hover {
     width: 100%;
 }
 
-._15R-X0u_aOvq89ku9Zzafx{
+._15R-X0u_aOvq89ku9Zzafx {
     margin: auto;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
 }
 
-._3nixltWXjT6VcPT387mxo7{
+._3nixltWXjT6VcPT387mxo7 {
     background-image: url('https://ik.imagekit.io/t2vnkmzt25/vid/ic_videocam_24px_kaXiZAv0JBc4.png');
 }
 
-._-zyQBujRS3_0wb-jhVeJ{
+._-zyQBujRS3_0wb-jhVeJ {
     background-image: url('https://ik.imagekit.io/t2vnkmzt25/vid/ic_mic_off_24px_qXDNa_WnUGIU2.png');
 }
 
@@ -274,17 +274,18 @@ button:hover {
     padding: 5px;
 }
 
-._3LkQ4KRp-oIPGKRHK-xjvz:hover{
+._3LkQ4KRp-oIPGKRHK-xjvz:hover {
     background-color: #59030A;
 }
 
 @media(max-width: 500px) {
-    ._27mPepz47jgSsnu9hsZdVV{
-        flex-direction: column;
-        height: 85%;
+    ._27mPepz47jgSsnu9hsZdVV {
+        grid-template-rows: 50% 50%;
+        grid-template-columns: none;
+        height: 85vh;
     }
 
-    ._2GmN_QFROcyhpeJxZBKKi_{
+    ._2GmN_QFROcyhpeJxZBKKi_ {
         width: 100%;
     }
 }
