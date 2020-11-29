@@ -61,6 +61,8 @@ section {
 
 span {
     display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     font-size: 1.3rem;
     font-weight: 450;
