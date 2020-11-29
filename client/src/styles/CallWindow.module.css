@@ -17,12 +17,12 @@
 .VideoContainers {
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
 .VideoContainer {
-    width: 50%;
+    width: 100%;
     height: 100%;
     display: block;
     background: #2E2D2D;
@@ -51,18 +51,18 @@
     width: 100%;
 }
 
-.ButtonContainer{
+.ButtonContainer {
     margin: auto;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
 }
 
-.VideoButton{
+.VideoButton {
     background-image: url('https://ik.imagekit.io/t2vnkmzt25/vid/ic_videocam_24px_kaXiZAv0JBc4.png');
 }
 
-.AudioButton{
+.AudioButton {
     background-image: url('https://ik.imagekit.io/t2vnkmzt25/vid/ic_mic_off_24px_qXDNa_WnUGIU2.png');
 }
 
@@ -82,17 +82,18 @@
     padding: 5px;
 }
 
-.HangupButton:hover{
+.HangupButton:hover {
     background-color: #59030A;
 }
 
 @media(max-width: 500px) {
-    .VideoContainers{
-        flex-direction: column;
-        height: 85%;
+    .VideoContainers {
+        grid-template-rows: 50% 50%;
+        grid-template-columns: none;
+        height: 85vh;
     }
 
-    .VideoContainer{
+    .VideoContainer {
         width: 100%;
     }
 }
