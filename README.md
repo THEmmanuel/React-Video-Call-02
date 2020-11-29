@@ -1,6 +1,6 @@
 **This repository contains the code for a Video calling application made with React.js, Express, webRTC API and socket.IO**
 
-Demo app hosted here:
+Demo app hosted [here:](http://react-rtc-caller.herokuapp.com/)
 
 ### Main technologies used:
 
